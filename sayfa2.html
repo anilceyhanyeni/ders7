@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayfa 2</title>
+</head>
+
+<body>
+    <div id="kutu1"></div>
+
+    <script>
+        let icerikHTML = `
+                <ul>
+                    <li> 3 yumurta </li>
+                    <li> 1 su bardağı şeker </li>
+                    <li> 1 çay bardağı yağ </li>
+                    <li> 1 çağ bardağı süt </li>
+                    <li> 1 paket kabartma tozu </li>
+                    <li> 1 paket vanilya </li>
+                </ul>
+                <div>
+                    <a href="https://facebook.com"> Facebook </a>
+                    <a href="https://twitter.com"> Twitter </a>
+                    <a href="https://whatsapp.com"> Whatsapp </a>
+                </div>
+                <section>
+                    <div>Yorum 1 ....</div>
+                    <div>Yorum 2 ....</div>
+                    <div>Yorum 3 ....</div>
+                    <div>Yorum 4 ....</div>
+                </section>
+                <hr />
+
+                <ul>
+                    <li>lorem 1  </li>
+                    <li>lorem 2  </li>
+                    <li>lorem 3  </li>
+                </ul>
+                <div>
+                    <a href="https://facebook.com"> Facebook </a>
+                    <a href="https://twitter.com"> Twitter </a>
+                    <a href="https://whatsapp.com"> Whatsapp </a>
+                </div>
+
+ 
+        `
+
+        let anaEtiket = document.querySelector("#kutu1")
+        anaEtiket.innerHTML = icerikHTML
+    </script>
+</body>
+
+</html>

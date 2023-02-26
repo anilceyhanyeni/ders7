@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Denemesi</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="kutu1"></div>
+
+    <script type="text/babel">
+        function Paylas(ozellikler) {
+            return (
+                <div style={{backgroundColor: ozellikler.renk}}>
+                    <a href="https://facebook.com"> Facebook </a>
+                    <a href="https://twitter.com"> Twitter </a>
+                    <a href="https://whatsapp.com"> Whatsapp </a>
+                </div>
+            )
+        }
+
+        function Yorumlar() {
+            return (
+                <section>
+                    <div>Yorum 1 ....</div>
+                    <div>Yorum 2 ....</div>
+                    <div>Yorum 3 ....</div>
+                    <div>Yorum 4 ....</div>
+                </section>
+            )
+        }
+
+        function Yemek1() {
+
+            return (
+                <ul>
+                    <li> 3 yumurta </li>
+                    <li> 1 su bardağı şeker </li>
+                    <li> 1 çay bardağı yağ </li>
+                    <li> 1 çağ bardağı süt </li>
+                    <li> 1 paket kabartma tozu </li>
+                    <li> 1 paket vanilya </li>
+                </ul>
+            )
+        }
+
+        function Yemek2() {
+            return (
+                <ul>
+                    <li> Lorem 1 </li>
+                    <li> Lorem 2 </li>
+                    <li> lorem 3 </li>
+                </ul>
+            )
+        }
+
+        function Icerik() {
+            return (
+                <section>
+                    <Yemek1 />
+                    <Paylas renk="yellow" />
+                    <Yorumlar />
+                    <hr />
+                    <Yemek2 />
+                    <Paylas renk="green" />
+                </section>
+            )
+        }
+
+        ReactDOM.render( <Icerik />, document.querySelector("#kutu1") )
+    </script>
+</body>
+</html>
