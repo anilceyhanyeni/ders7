@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Fonksiyonlar 2</title>
+</head>
+<body>
+
+    <div id="ana-etiket"></div>
+    
+    <script>
+        let anaEtiket = document.querySelector("#ana-etiket")
+
+        /*
+        async function veriCek() {
+           let sonuc = await fetch('https://fakestoreapi.com/carts/5')
+           let veri = await sonuc.json()
+
+           let listeElemani = document.createElement("ul")
+           veri.products.forEach( (urun)=> { 
+                let urunNo = urun.productId
+                let urunAdet = urun.quantity
+
+                let liElemani = document.createElement("li")
+                liElemani.innerHTML = ` <strong>Ürün: ${urunNo}</strong>: ${urunAdet} adet `
+                listeElemani.append(liElemani)
+           } )
+           
+           anaEtiket.append(listeElemani)
+        }
+
+        veriCek()
+        */
+
+        function veriCek2() {
+            fetch('https://fakestoreapi.com/carts/5')
+            .then( sonuc => sonuc.json() )
+            .then( veri => {
+                let listeElemani = document.createElement("ul")
+                veri.products.forEach( (urun)=> { 
+                    let urunNo = urun.productId
+                    let urunAdet = urun.quantity
+
+                    let liElemani = document.createElement("li")
+                    liElemani.innerHTML = ` <strong>Ürün: ${urunNo}</strong>: ${urunAdet} adet `
+                    listeElemani.append(liElemani)
+                } )
+                
+                anaEtiket.append(listeElemani)
+            } )
+        }
+        
+        veriCek2()
+
+    </script>
+</body>
+</html>
